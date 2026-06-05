@@ -18,7 +18,18 @@ npx serve .
 
 ## Formulario
 
-El formulario guarda el preregistro en `localStorage` y abre un `mailto:` con los datos. Para produccion se recomienda conectar `app.js` a una API de leads, CRM, Google Sheets o servicio de formularios.
+El formulario no crea empresas ni usuarios. Genera un token y un enlace unico de descarga para la plataforma elegida.
+
+Para envio real por correo, define antes de cargar `app.js`:
+
+```html
+<script>
+  window.POSTRACK_LEAD_ENDPOINT = "https://tu-api.com/leads";
+  window.POSTRACK_DOWNLOAD_BASE_URL = "https://tu-api.com/download";
+</script>
+```
+
+El endpoint recibira `name`, `email`, `phone`, `business`, `platform`, `downloadToken` y `downloadLink`. Sin endpoint, la pagina conserva el preregistro en `localStorage` y abre un `mailto:` operativo prellenado.
 
 ## Deploy
 

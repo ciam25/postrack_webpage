@@ -21,6 +21,18 @@
   <body>
     <div class="public-shell">
       <div class="public-texture" aria-hidden="true"></div>
+      <div class="particle-field" aria-hidden="true">
+        <span style="--x: 8%; --y: 18%; --s: 0.8; --d: 0s"></span>
+        <span style="--x: 22%; --y: 72%; --s: 1.15; --d: -8s"></span>
+        <span style="--x: 36%; --y: 28%; --s: 0.65; --d: -16s"></span>
+        <span style="--x: 51%; --y: 82%; --s: 0.9; --d: -4s"></span>
+        <span style="--x: 66%; --y: 22%; --s: 1.25; --d: -12s"></span>
+        <span style="--x: 79%; --y: 62%; --s: 0.72; --d: -20s"></span>
+        <span style="--x: 91%; --y: 34%; --s: 1; --d: -6s"></span>
+        <span style="--x: 14%; --y: 45%; --s: 0.55; --d: -14s"></span>
+        <span style="--x: 44%; --y: 10%; --s: 0.82; --d: -22s"></span>
+        <span style="--x: 84%; --y: 86%; --s: 1.05; --d: -10s"></span>
+      </div>
 
       <main class="page">
         <header class="topbar" aria-label="Postrack">
@@ -41,7 +53,24 @@
             <p class="hero-text">
               Opera tu punto de venta desde Android o Windows con una experiencia local,
               rapida y lista para negocios que necesitan vender sin complicarse.
+              Registrate y recibe un enlace unico de descarga en tu correo.
             </p>
+          </div>
+
+          <div class="product-showcase" aria-label="Vista previa Postrack en Windows y Android">
+            <figure class="device-frame desktop-preview">
+              <div class="window-chrome" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <img src="./assets/postrack-windows.png" alt="Postrack Local en Windows" />
+            </figure>
+
+            <figure class="device-frame phone-preview">
+              <div class="phone-speaker" aria-hidden="true"></div>
+              <img src="./assets/postrack-android.png" alt="Postrack Local en Android" />
+            </figure>
           </div>
 
           <div class="download-panel" aria-label="Descargas Postrack">
@@ -70,8 +99,9 @@
             <p class="eyebrow">Acceso anticipado</p>
             <h2 id="lead-title">Registro previo</h2>
             <p>
-              Dejanos tus datos y te avisamos cuando la descarga oficial este disponible.
-              Este formulario no crea empresa ni cuenta: solo guarda tu solicitud de contacto.
+              Dejanos tus datos y te enviaremos al correo un enlace unico para descargar
+              Postrack en la plataforma que elijas. Este formulario no crea empresa ni cuenta:
+              solo registra tu solicitud de contacto.
             </p>
           </div>
 
@@ -108,16 +138,16 @@
             </label>
 
             <button class="submit-button" type="submit">
-              Solicitar descarga
+              Enviarme enlace unico
             </button>
 
             <p class="form-note">
-              Al enviar, prepararemos tu solicitud de contacto. No se crea ninguna empresa ni cuenta.
+              Al enviar, generamos un enlace unico de descarga para tu correo. No se crea ninguna empresa ni cuenta.
             </p>
 
             <div class="success-card" id="success-card" role="status" aria-live="polite" hidden>
-              <strong>Solicitud lista.</strong>
-              <span>Te contactaremos para entregar la descarga de Postrack Local.</span>
+              <strong>Enlace generado.</strong>
+              <span>Revisa tu correo para continuar con la descarga de Postrack Local.</span>
             </div>
           </form>
         </section>

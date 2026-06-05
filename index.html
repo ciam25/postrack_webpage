@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Postrack Local: POS para ventas, inventario y control operativo. Descarga para Android o Windows con preregistro."
+    />
+    <meta name="theme-color" content="#480969" />
+    <title>Postrack Local | POS para Android y Windows</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="public-shell">
+      <div class="public-texture" aria-hidden="true"></div>
+
+      <main class="page">
+        <header class="topbar" aria-label="Postrack">
+          <a class="brand" href="#inicio" aria-label="Postrack Local">
+            <span class="brand-mark">
+              <img src="./assets/favicon.svg" alt="" />
+            </span>
+            <span class="brand-name">Postrack Local</span>
+          </a>
+
+          <a class="topbar-link" href="#preregistro">Registro previo</a>
+        </header>
+
+        <section class="hero" id="inicio">
+          <div class="hero-copy">
+            <p class="eyebrow">Ventas. Inventario. Control.</p>
+            <h1>Tu negocio, bajo control.</h1>
+            <p class="hero-text">
+              Opera tu punto de venta desde Android o Windows con una experiencia local,
+              rapida y lista para negocios que necesitan vender sin complicarse.
+            </p>
+          </div>
+
+          <div class="download-panel" aria-label="Descargas Postrack">
+            <button class="download-button primary" type="button" data-platform="Android">
+              <span class="button-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M7 9.5h10v7.2a2.3 2.3 0 0 1-2.3 2.3H9.3A2.3 2.3 0 0 1 7 16.7V9.5Zm2.1-4.7L8 3.7a.7.7 0 0 1 1-1l1.3 1.3a6.1 6.1 0 0 1 3.4 0L15 2.7a.7.7 0 0 1 1 1l-1.1 1.1A5.7 5.7 0 0 1 17 8H7a5.7 5.7 0 0 1 2.1-3.2ZM9.5 7a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6Zm5 0a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6ZM4.3 10h1.4v5.7H4.3V10Zm16 0h1.4v5.7h-1.4V10Z" />
+                </svg>
+              </span>
+              <span>Descargar para Android</span>
+            </button>
+
+            <button class="download-button secondary" type="button" data-platform="Windows">
+              <span class="button-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M3 5.1 10.4 4v7H3V5.1Zm8.4-1.2L21 2.5V11h-9.6V3.9ZM3 12.5h7.4v7L3 18.4v-5.9Zm8.4 0H21v8.5l-9.6-1.4v-7.1Z" />
+                </svg>
+              </span>
+              <span>Descargar para Windows</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="lead-section" id="preregistro" aria-labelledby="lead-title">
+          <div class="lead-copy">
+            <p class="eyebrow">Acceso anticipado</p>
+            <h2 id="lead-title">Registro previo</h2>
+            <p>
+              Dejanos tus datos y te avisamos cuando la descarga oficial este disponible.
+              Este formulario no crea empresa ni cuenta: solo guarda tu solicitud de contacto.
+            </p>
+          </div>
+
+          <form class="lead-form" id="lead-form">
+            <input type="hidden" id="platform" name="platform" value="Android" />
+
+            <div class="platform-toggle" role="group" aria-label="Plataforma de interes">
+              <button class="platform-option active" type="button" data-platform-option="Android">
+                Android
+              </button>
+              <button class="platform-option" type="button" data-platform-option="Windows">
+                Windows
+              </button>
+            </div>
+
+            <label>
+              <span>Nombre de contacto</span>
+              <input autocomplete="name" name="name" required placeholder="Juan Perez" />
+            </label>
+
+            <label>
+              <span>Correo</span>
+              <input autocomplete="email" name="email" required type="email" placeholder="correo@negocio.com" />
+            </label>
+
+            <label>
+              <span>Telefono o WhatsApp</span>
+              <input autocomplete="tel" name="phone" required placeholder="+57 300 000 0000" />
+            </label>
+
+            <label>
+              <span>Nombre del negocio</span>
+              <input name="business" placeholder="Mi restaurante" />
+            </label>
+
+            <button class="submit-button" type="submit">
+              Solicitar descarga
+            </button>
+
+            <p class="form-note">
+              Al enviar, prepararemos tu solicitud de contacto. No se crea ninguna empresa ni cuenta.
+            </p>
+
+            <div class="success-card" id="success-card" role="status" aria-live="polite" hidden>
+              <strong>Solicitud lista.</strong>
+              <span>Te contactaremos para entregar la descarga de Postrack Local.</span>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -126,7 +126,7 @@ input {
   width: min(1120px, calc(100% - 32px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 24px 0 40px;
+  padding: 18px 0 34px;
 }
 
 .topbar {
@@ -150,8 +150,8 @@ input {
 
 .brand-mark {
   display: grid;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   place-items: center;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.12);
@@ -159,8 +159,8 @@ input {
 }
 
 .brand-mark img {
-  width: 34px;
-  height: 34px;
+  width: 29px;
+  height: 29px;
 }
 
 .brand-name {
@@ -188,12 +188,12 @@ input {
 }
 
 .hero {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 86px);
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.95fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(380px, 0.92fr);
   grid-template-rows: 1fr auto;
-  gap: 36px 42px;
-  padding: 72px 0 24px;
+  gap: 22px 36px;
+  padding: 34px 0 16px;
 }
 
 .hero-copy {
@@ -203,7 +203,7 @@ input {
 
 .product-showcase {
   position: relative;
-  min-height: 500px;
+  min-height: min(43vh, 390px);
   align-self: center;
   animation: showcaseFloatIn 620ms ease both;
 }
@@ -226,9 +226,9 @@ input {
 
 .desktop-preview {
   position: absolute;
-  top: 18px;
+  top: 8px;
   right: 0;
-  width: min(100%, 620px);
+  width: min(100%, 520px);
   aspect-ratio: 16 / 10;
   border-radius: 24px;
   padding-top: 28px;
@@ -260,9 +260,9 @@ input {
 
 .phone-preview {
   position: absolute;
-  right: 18px;
+  right: 8px;
   bottom: 0;
-  width: min(38%, 210px);
+  width: min(34%, 160px);
   aspect-ratio: 9 / 19.5;
   border-radius: 28px;
   padding: 10px;
@@ -317,7 +317,7 @@ input {
 }
 
 .eyebrow {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   font-size: clamp(0.8rem, 1.7vw, 1rem);
   font-weight: 700;
   letter-spacing: 0.24em;
@@ -333,15 +333,15 @@ h2 {
 }
 
 h1 {
-  max-width: 840px;
-  font-size: clamp(4rem, 12vw, 7rem);
+  max-width: 680px;
+  font-size: clamp(3.25rem, 7.4vw, 5.9rem);
 }
 
 .hero-text {
-  max-width: 680px;
-  margin: 26px 0 0;
-  font-size: clamp(1.1rem, 2.4vw, 1.55rem);
-  line-height: 1.55;
+  max-width: 600px;
+  margin: 18px 0 0;
+  font-size: clamp(1rem, 1.55vw, 1.25rem);
+  line-height: 1.48;
   color: rgba(255, 255, 255, 0.76);
 }
 
@@ -360,14 +360,14 @@ h1 {
 }
 
 .download-button {
-  min-height: 68px;
+  min-height: 58px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   border-radius: 14px;
   padding: 0 24px;
-  font-size: clamp(1rem, 2vw, 1.18rem);
+  font-size: clamp(0.96rem, 1.6vw, 1.08rem);
   font-weight: 800;
   transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
 }
@@ -566,11 +566,16 @@ input:focus {
   .hero {
     grid-template-columns: 1fr;
     min-height: calc(100vh - 92px);
-    padding-top: 56px;
+    gap: 22px;
+    padding-top: 42px;
   }
 
   h1 {
-    font-size: clamp(3.4rem, 16vw, 5.8rem);
+    font-size: clamp(3rem, 13vw, 4.9rem);
+  }
+
+  .hero-text {
+    font-size: clamp(1rem, 4.4vw, 1.22rem);
   }
 
   .download-panel,
@@ -579,7 +584,11 @@ input:focus {
   }
 
   .product-showcase {
-    min-height: 390px;
+    min-height: 300px;
+    order: 3;
+  }
+
+  .download-panel {
     order: 2;
   }
 
@@ -593,7 +602,7 @@ input:focus {
 
   .phone-preview {
     right: 10px;
-    width: min(40%, 158px);
+    width: min(36%, 132px);
     border-radius: 22px;
     padding: 8px;
   }
